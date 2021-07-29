@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        replaceFragment(homeFragment)
+        replaceFragment(exploreFragment)
         controlBottomNav()
 
         val bookService = RetrofitSingleton.retrofit.getBooks("flowers", "AIzaSyA__YSz-DE9A_tlqNU68U8aS75yusXrKxs")
@@ -45,8 +45,8 @@ class MainActivity : AppCompatActivity() {
     private fun controlBottomNav() {
         binding.bottomNavigatinView.setOnNavigationItemSelectedListener {
             when (it.itemId) {
-                R.id.homeFragment -> replaceFragment(homeFragment)
                 R.id.exploreFragment -> replaceFragment(exploreFragment)
+                R.id.homeFragment -> replaceFragment(homeFragment)
             }
             true
         }
