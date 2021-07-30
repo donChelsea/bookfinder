@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment
 import com.example.bookfinder.databinding.ActivityMainBinding
 import com.example.bookfinder.elements.Items
 import com.example.bookfinder.network.RetrofitSingleton
+import com.example.bookfinder.presentation.BottomSheetExplore
 import com.example.bookfinder.presentation.ExploreFragment
 import com.example.bookfinder.presentation.HomeFragment
 import retrofit2.Call

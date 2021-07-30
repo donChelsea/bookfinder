@@ -24,6 +24,14 @@ class ExploreFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        BottomSheetExplore().apply {
+            activity?.supportFragmentManager.let {
+                if (it != null) {
+                    show(it, "BottomSheetExplore")
+                }
+            }
+        }
+
         BottomSheetBehavior.from(binding.bottomSheetLayout).apply {
             peekHeight = 200
             this.state = BottomSheetBehavior.STATE_COLLAPSED
